@@ -1,0 +1,15 @@
+# Revisa el estilo antes de cada commit. `
+# Usa el ruff instalado en el entorno.
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: ruff check
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: ruff format 
+        entry: ruff format --check
+        language: system
+        types: [python]

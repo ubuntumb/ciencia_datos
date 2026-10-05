@@ -1,0 +1,39 @@
+name: U1 · Tarea
+
+on:
+  pull_request:
+    paths:
+      - "u1-entorno/tarea/**"
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Instalar uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+          enable-cache: true
+
+      - name: Instalar dependencias
+        run: uv sync --locked
+
+      - name: Pruebas de las herramientas de la tarea
+        run: uv run pytest u1-entorno/tarea/tests
+
+      - name: Revisar la entrega
+        env:
+          USUARIO: ${{ github.event.pull_request.user.login }}
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git fetch origin "$BASE_REF"
+          CARPETA="u1-entorno/tarea/entregas/$USUARIO"
+          uv run ruff check "$CARPETA"
+          uv run ruff format --check "$CARPETA"
+          uv run pytest "$CARPETA"
+          uv run python u1-entorno/tarea/validar_entrega.py --usuario "$USUARIO" --base "origin/$BASE_REF"   
