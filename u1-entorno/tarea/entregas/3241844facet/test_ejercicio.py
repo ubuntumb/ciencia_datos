@@ -1,10 +1,8 @@
-import pytest
 from ejercicio import (
-    parse_fecha,
-    separar_nombre_id,
     comision_esperada,
-    resumen_por_marca,
     descripcion_venta,
+    resumen_por_marca,
+    separar_nombre_id,
 )
 
 
