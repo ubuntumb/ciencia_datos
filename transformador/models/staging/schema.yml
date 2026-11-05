@@ -1,0 +1,76 @@
+version: 2
+
+sources:
+  - name: raw_data
+    schema: raw_data
+    tables:
+      - name: raw_productos
+      - name: raw_vendedores
+      - name: raw_compras
+      - name: raw_ventas
+      - name: raw_movimientos_stock
+
+models:
+  - name: stg_productos
+    description: "Capa staging de productos con tipos de datos validados y nombres limpios."
+    columns:
+      - name: producto_id
+        tests:
+          - not_null
+          - unique
+      - name: costo_unitario
+        tests:
+          - not_null
+      - name: precio_venta
+        tests:
+          - not_null
+
+  - name: stg_vendedores
+    description: "Capa staging de vendedores."
+    columns:
+      - name: vendedor_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_compras
+    description: "Capa staging de órdenes de compra de stock."
+    columns:
+      - name: compra_id
+        tests:
+          - not_null
+          - unique
+      - name: producto_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_productos')
+              field: producto_id
+
+  - name: stg_ventas
+    description: "Capa staging de transacciones de ventas."
+    columns:
+      - name: venta_id
+        tests:
+          - not_null
+          - unique
+      - name: producto_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_productos')
+              field: producto_id
+      - name: vendedor_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_vendedores')
+              field: vendedor_id
+
+  - name: stg_movimientos_stock
+    description: "Capa staging de movimientos físicos de almacén."
+    columns:
+      - name: movimiento_id
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: mart_ventas_diarias
+    description: "Resumen diario de facturación, volumen y métricas consolidadas."
+    columns:
+      - name: fecha
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_rentabilidad_productos
+    description: "Métricas de rentabilidad bruta y márgenes por producto."
+    columns:
+      - name: producto_id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              to: ref('stg_productos')
+              field: producto_id
+
+  - name: mart_rotacion_inventario
+    description: "Control de stock actual, consumo diario y estimación de días de stock."
+    columns:
+      - name: producto_id
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_desempeno_vendedores
+    description: "Ventas acumuladas y ticket promedio por vendedor."
+    columns:
+      - name: vendedor_id
+        tests:
+          - not_null
+          - unique
+
+  - name: mart_clasificacion_abc_productos
+    description: "Clasificación Pareto ABC de productos basada en ingresos acumulados."
+    columns:
+      - name: producto_id
+        tests:
+          - not_null
+          - unique

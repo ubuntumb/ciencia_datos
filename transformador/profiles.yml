@@ -1,0 +1,7 @@
+transformador:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: ../minimarket.duckdb
+      threads: 4

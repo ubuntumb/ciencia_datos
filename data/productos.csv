@@ -1,0 +1,11 @@
+producto_id,nombre_producto,categoria,costo_unitario,precio_venta,stock_inicial
+1,Producto 1 (LÁC),Lácteos,452,716,175
+2,Producto 2 (LÁC),Lácteos,367,574,169
+3,Producto 3 (PAN),Panadería,437,634,197
+4,Producto 4 (LIM),Limpieza,387,563,71
+5,Producto 5 (LÁC),Lácteos,408,526,35
+6,Producto 6 (LIM),Limpieza,498,778,135
+7,Producto 7 (ABA),Abarrotes,468,626,101
+8,Producto 8 (LIM),Limpieza,350,500,29
+9,Producto 9 (ABA),Abarrotes,487,700,83
+10,Producto 10 (LIM),Limpieza,479,707,193

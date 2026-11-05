@@ -2,7 +2,7 @@ import dlt
 import requests
 
 REST_COUNTRIES = "https://api.restcountries.com/countries/v5/codes.alpha_3"
-AUTH = ""
+AUTH = "rc_live_fc8ae2f68e3841d8b39eab761765684f"
 URL_CLIMA = "https://api.open-meteo.com/v1/forecast?"
 CODIGOS_ISO = ["ARG", "BRA", "PRY"]
 
@@ -68,7 +68,9 @@ def _consultar_clima(pais: dict) -> dict | None:
     }
 
 
-@dlt.resource(name="paises", write_disposition="replace")
+@dlt.resource(
+        name="paises", 
+        write_disposition="replace")
 def obtener_paises():
     """Recurso atómico para extraer países de la API."""
 
