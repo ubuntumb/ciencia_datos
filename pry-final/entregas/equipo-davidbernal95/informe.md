@@ -48,4 +48,4 @@ En Windows se construyeron 18 modelos, se aprobaron 95 pruebas de dbt y pasaron 
 
 Los datos son ficticios. No incluyen clientes, devoluciones, gastos del negocio ni pedidos que no pudieron venderse por falta de stock. Esa última limitación puede hacer que la venta media subestime la demanda real. Sería útil incorporar plazos de entrega de proveedores, devoluciones y stock de seguridad. También convendría comparar el costo medio del período con un promedio móvil.
 
-Se usaron los materiales de clase de dlt, DuckDB, dbt, modelado y Dagster como referencia. ChatGPT se utilizó como apoyo para preparar y revisar el código, las pruebas y la documentación.
+Se usaron los materiales de clase de dlt, DuckDB, dbt, modelado y Dagster como referencia.
