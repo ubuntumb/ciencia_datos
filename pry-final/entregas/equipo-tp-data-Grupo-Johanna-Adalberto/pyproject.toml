@@ -1,0 +1,25 @@
+[project]
+name = "pipeline-minimercado"
+version = "0.1.0"
+description = "Proyecto integrador de programación en entornos de datos"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "dlt[duckdb]==1.32.0",
+    "duckdb==1.5.6",
+    "dbt-core==1.12.6",
+    "dbt-duckdb==1.11.1",
+    "dagster==1.13.29",
+]
+
+[dependency-groups]
+dev = ["pytest==9.2.0", "ruff==0.17.4"]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B"]

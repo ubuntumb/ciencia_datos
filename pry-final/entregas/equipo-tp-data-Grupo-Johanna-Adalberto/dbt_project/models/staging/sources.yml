@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: productos
+      - name: vendedores
+      - name: compras
+      - name: ventas
+      - name: movimientos_stock

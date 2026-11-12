@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.dlt/
+.dagster/
+*.duckdb
+*.duckdb.wal
+target/
+logs/
+.user.yml
+resultados.json

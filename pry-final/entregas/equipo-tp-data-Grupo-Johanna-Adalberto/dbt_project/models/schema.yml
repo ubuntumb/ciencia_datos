@@ -1,0 +1,140 @@
+version: 2
+models:
+  - name: stg_productos
+    columns:
+      - name: id
+        data_tests:
+          - not_null
+          - unique
+      - name: nombre
+        data_tests:
+          - not_null
+      - name: categoria
+        data_tests:
+          - not_null
+      - name: costo_unitario
+        data_tests:
+          - not_null
+      - name: precio_venta
+        data_tests:
+          - not_null
+      - name: stock_inicial
+        data_tests:
+          - not_null
+  - name: stg_vendedores
+    columns:
+      - name: id
+        data_tests:
+          - not_null
+          - unique
+      - name: nombre
+        data_tests:
+          - not_null
+      - name: sucursal
+        data_tests:
+          - not_null
+      - name: fecha_alta
+        data_tests:
+          - not_null
+  - name: stg_compras
+    columns:
+      - name: id
+        data_tests:
+          - not_null
+          - unique
+      - name: fecha
+        data_tests:
+          - not_null
+      - name: producto_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: id
+      - name: cantidad
+        data_tests:
+          - not_null
+      - name: costo_unitario
+        data_tests:
+          - not_null
+      - name: proveedor
+        data_tests:
+          - not_null
+  - name: stg_ventas
+    columns:
+      - name: id
+        data_tests:
+          - not_null
+          - unique
+      - name: fecha
+        data_tests:
+          - not_null
+      - name: producto_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: id
+      - name: cantidad
+        data_tests:
+          - not_null
+      - name: precio_unitario
+        data_tests:
+          - not_null
+      - name: descuento
+        data_tests:
+          - not_null
+      - name: vendedor_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_vendedores')
+                field: id
+  - name: stg_movimientos_stock
+    columns:
+      - name: id
+        data_tests:
+          - not_null
+          - unique
+      - name: fecha
+        data_tests:
+          - not_null
+      - name: producto_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: id
+      - name: tipo
+        data_tests:
+          - not_null
+      - name: cantidad
+        data_tests:
+          - not_null
+      - name: referencia_id
+        data_tests:
+          - not_null
+  - name: mart_ventas_diarias
+    columns:
+      - name: fecha
+        data_tests: [not_null, unique]
+  - name: mart_rentabilidad_productos
+    columns:
+      - name: producto_id
+        data_tests: [not_null, unique]
+  - name: mart_rotacion_inventario
+    columns:
+      - name: producto_id
+        data_tests: [not_null, unique]
+  - name: mart_desempeno_vendedores
+    columns:
+      - name: vendedor_id
+        data_tests: [not_null, unique]
+  - name: mart_abc_productos
+    columns:
+      - name: producto_id
+        data_tests: [not_null, unique]

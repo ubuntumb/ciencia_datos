@@ -1,0 +1,21 @@
+id,nombre,categoria,costo_unitario,precio_venta,stock_inicial
+1,Arroz,Almacén,11500,12500,15
+2,Fideos,Almacén,5500,7000,18
+3,Harina,Almacén,3500,7000,16
+4,Aceite,Almacén,12000,15500,23
+5,Azúcar,Almacén,2500,5500,21
+6,Agua,Bebidas,2000,3000,16
+7,Jugo,Bebidas,4500,6000,23
+8,Gaseosa,Bebidas,11000,12000,23
+9,Yerba mate,Bebidas,4500,8000,25
+10,Café,Bebidas,10000,12500,18
+11,Jabón,Limpieza,8500,11500,19
+12,Detergente,Limpieza,1500,3000,21
+13,Lavandina,Limpieza,6500,8500,17
+14,Esponja,Limpieza,4500,6500,16
+15,Papel higiénico,Limpieza,2500,5000,16
+16,Leche,Refrigerados,7000,9000,24
+17,Yogur,Refrigerados,5500,6500,22
+18,Queso,Refrigerados,10000,11000,21
+19,Manteca,Refrigerados,2500,5500,19
+20,Huevos,Refrigerados,11500,14500,20
