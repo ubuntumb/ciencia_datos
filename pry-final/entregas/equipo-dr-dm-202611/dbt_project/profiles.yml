@@ -1,0 +1,7 @@
+minimercado:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "../data.duckdb"
+      schema: main

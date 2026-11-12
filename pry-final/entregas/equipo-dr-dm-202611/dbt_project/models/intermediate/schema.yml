@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: int_movimientos_stock
+    columns:
+      - name: movimiento_id
+        tests:
+          - unique
+          - not_null

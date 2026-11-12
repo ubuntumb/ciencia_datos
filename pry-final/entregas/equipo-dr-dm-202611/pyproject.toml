@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pipeline-minimercado"
+version = "0.1.0"
+description = "Pipeline Analítico de un Minimercado con dlt, DuckDB, dbt y Dagster"
+authors = ["David Reese <3241844@facet-unc.edu.py>", "Diana Moré <3625595@facet-unc.edu.py>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dlt = {extras = ["duckdb"], version = "^0.4.0"}
+dbt-duckdb = "^1.7.0"
+dagster = "^1.6.0"
+pytest = "^8.0.0"
+pandas = "^2.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

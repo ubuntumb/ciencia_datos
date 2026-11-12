@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: mart_rentabilidad_productos
+    columns:
+      - name: producto_id
+        tests:
+          - unique
+          - not_null
+      - name: clasificacion_abc
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['A', 'B', 'C']
+
+  - name: mart_ventas_diarias
+    columns:
+      - name: fecha
+        tests:
+          - unique
+          - not_null

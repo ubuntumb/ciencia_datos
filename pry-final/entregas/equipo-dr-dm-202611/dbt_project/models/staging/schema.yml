@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: main
+    tables:
+      - name: productos
+      - name: vendedores
+      - name: compras
+      - name: ventas
+      - name: movimientos_stock
+
+models:
+  - name: stg_productos
+    columns:
+      - name: producto_id
+        tests:
+          - unique
+          - not_null
+  - name: stg_ventas
+    columns:
+      - name: venta_id
+        tests:
+          - unique
+          - not_null
+      - name: producto_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id
