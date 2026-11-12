@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: int_movimientos_stock
+    description: Movimientos con signo y stock acumulado por producto.
+    columns:
+      - name: movimiento_id
+        tests: [not_null, unique]
+      - name: producto_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id
+      - name: stock_acumulado
+        tests: [not_null]
+
+  - name: int_ventas_enriquecidas
+    description: Ventas unidas a producto y vendedor, con costo y ganancia bruta.
+    columns:
+      - name: venta_id
+        tests: [not_null, unique]
+      - name: ganancia_bruta
+        tests: [not_null]

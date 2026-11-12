@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: mart_ventas_diarias
+    description: Resumen diario de ventas (un registro por fecha, incluidos días sin ventas).
+    columns:
+      - name: fecha
+        tests: [not_null, unique]
+      - name: ingreso_neto
+        tests: [not_null]
+      - name: unidades_vendidas
+        tests: [not_null]
+
+  - name: mart_rentabilidad_productos
+    description: Ingreso, costo y ganancia bruta por producto.
+    columns:
+      - name: producto_id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id
+      - name: ganancia_bruta
+        tests: [not_null]
+
+  - name: mart_rotacion_inventario
+    description: Rotación, días de stock y alerta de punto de reposición por producto.
+    columns:
+      - name: producto_id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id
+      - name: stock_actual
+        tests: [not_null]
+      - name: bajo_punto_reposicion
+        tests: [not_null]
+
+  - name: mart_desempeno_vendedores
+    description: Métricas acumuladas por vendedor.
+    columns:
+      - name: vendedor_id
+        tests:
+          - not_null
+          - unique
+          - relationships:
+              arguments:
+                to: ref('stg_vendedores')
+                field: vendedor_id
+      - name: ingreso_neto
+        tests: [not_null]
+
+  - name: mart_clasificacion_abc
+    description: Clasificación ABC (Pareto) de productos según ingreso neto.
+    columns:
+      - name: producto_id
+        tests: [not_null, unique]
+      - name: clasificacion_abc
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['A', 'B', 'C']

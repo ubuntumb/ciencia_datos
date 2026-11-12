@@ -1,0 +1,91 @@
+version: 2
+
+models:
+  - name: stg_productos
+    description: Catálogo de productos limpio y tipado.
+    columns:
+      - name: producto_id
+        tests: [not_null, unique]
+      - name: nombre_producto
+        tests: [not_null, unique]
+      - name: categoria
+        tests: [not_null]
+      - name: costo_unitario
+        tests: [not_null]
+      - name: precio_venta
+        tests: [not_null]
+
+  - name: stg_vendedores
+    description: Vendedores con fecha de alta.
+    columns:
+      - name: vendedor_id
+        tests: [not_null, unique]
+      - name: nombre_vendedor
+        tests: [not_null]
+      - name: fecha_alta
+        tests: [not_null]
+
+  - name: stg_compras
+    description: Compras a proveedores.
+    columns:
+      - name: compra_id
+        tests: [not_null, unique]
+      - name: producto_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id
+      - name: fecha_compra
+        tests: [not_null]
+      - name: cantidad
+        tests: [not_null]
+
+  - name: stg_ventas
+    description: Líneas de venta con importes calculados (bruto, descuento, neto).
+    columns:
+      - name: venta_id
+        tests: [not_null, unique]
+      - name: producto_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id
+      - name: vendedor_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_vendedores')
+                field: vendedor_id
+      - name: fecha_venta
+        tests: [not_null]
+      - name: importe_neto
+        tests: [not_null]
+
+  - name: stg_movimientos_stock
+    description: Entradas y salidas de almacén.
+    columns:
+      - name: movimiento_id
+        tests: [not_null, unique]
+      - name: producto_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id
+      - name: tipo
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['entrada', 'salida']
+      - name: motivo
+        tests:
+          - accepted_values:
+              arguments:
+                values: ['stock_inicial', 'compra', 'venta', 'merma']

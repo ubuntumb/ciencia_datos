@@ -1,0 +1,8 @@
+minimercado:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      # Ruta relativa al directorio desde donde se ejecuta dbt (la raíz del equipo).
+      path: "{{ env_var('DUCKDB_PATH', 'data.duckdb') }}"
+      threads: 1   # DuckDB admite un solo escritor a la vez
