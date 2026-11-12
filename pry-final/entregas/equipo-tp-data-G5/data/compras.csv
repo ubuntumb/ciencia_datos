@@ -1,0 +1,168 @@
+id,fecha,producto_id,cantidad,costo_unitario,proveedor
+1,2026-07-02,14,132,3835,Bebidas del Paraguay
+2,2026-07-06,1,72,6439,Distribuidora Central
+3,2026-07-06,2,64,4274,Distribuidora Central
+4,2026-07-06,4,110,9631,Distribuidora Central
+5,2026-07-06,12,64,5997,Panificadora San José
+6,2026-07-06,13,45,5420,Panificadora San José
+7,2026-07-06,15,81,9498,Bebidas del Paraguay
+8,2026-07-09,5,63,6001,Distribuidora Central
+9,2026-07-09,6,55,4758,Distribuidora Central
+10,2026-07-09,12,88,5948,Panificadora San José
+11,2026-07-13,1,99,6594,Distribuidora Central
+12,2026-07-13,2,80,4053,Distribuidora Central
+13,2026-07-13,3,55,11408,Distribuidora Central
+14,2026-07-13,8,108,5345,Lácteos del Sur
+15,2026-07-13,11,72,9329,Panificadora San José
+16,2026-07-13,14,132,4158,Bebidas del Paraguay
+17,2026-07-13,15,90,8676,Bebidas del Paraguay
+18,2026-07-16,4,110,9132,Distribuidora Central
+19,2026-07-16,13,45,5674,Panificadora San José
+20,2026-07-16,17,54,14087,Granja La Esperanza
+21,2026-07-20,2,96,4009,Distribuidora Central
+22,2026-07-20,5,63,5719,Distribuidora Central
+23,2026-07-20,6,45,4587,Distribuidora Central
+24,2026-07-20,8,132,5495,Lácteos del Sur
+25,2026-07-20,9,36,19105,Lácteos del Sur
+26,2026-07-20,12,80,6219,Panificadora San José
+27,2026-07-23,3,45,11323,Distribuidora Central
+28,2026-07-23,4,110,10044,Distribuidora Central
+29,2026-07-23,11,54,9186,Panificadora San José
+30,2026-07-23,15,99,9435,Bebidas del Paraguay
+31,2026-07-23,17,66,14260,Granja La Esperanza
+32,2026-07-27,1,90,6215,Distribuidora Central
+33,2026-07-27,5,63,5923,Distribuidora Central
+34,2026-07-27,6,40,5019,Distribuidora Central
+35,2026-07-27,7,18,13806,Distribuidora Central
+36,2026-07-27,8,132,5316,Lácteos del Sur
+37,2026-07-27,9,36,19934,Lácteos del Sur
+38,2026-07-27,10,44,8117,Lácteos del Sur
+39,2026-07-27,13,55,5420,Panificadora San José
+40,2026-07-27,14,121,3844,Bebidas del Paraguay
+41,2026-07-27,16,30,7535,Bebidas del Paraguay
+42,2026-07-27,20,40,10167,Limpia Hogar S.A.
+43,2026-08-03,2,64,4035,Distribuidora Central
+44,2026-08-03,3,55,11085,Distribuidora Central
+45,2026-08-03,4,110,9203,Distribuidora Central
+46,2026-08-03,5,63,5636,Distribuidora Central
+47,2026-08-03,6,40,4798,Distribuidora Central
+48,2026-08-03,11,54,8749,Panificadora San José
+49,2026-08-03,12,72,5871,Panificadora San José
+50,2026-08-03,15,108,8658,Bebidas del Paraguay
+51,2026-08-03,17,48,13751,Granja La Esperanza
+52,2026-08-06,1,81,6598,Distribuidora Central
+53,2026-08-06,7,24,14501,Distribuidora Central
+54,2026-08-06,10,48,7828,Lácteos del Sur
+55,2026-08-06,13,50,5559,Panificadora San José
+56,2026-08-06,14,88,4035,Bebidas del Paraguay
+57,2026-08-06,16,27,7902,Bebidas del Paraguay
+58,2026-08-06,20,36,10287,Limpia Hogar S.A.
+59,2026-08-10,1,81,6544,Distribuidora Central
+60,2026-08-10,2,88,4053,Distribuidora Central
+61,2026-08-10,5,63,5702,Distribuidora Central
+62,2026-08-10,6,40,4985,Distribuidora Central
+63,2026-08-10,8,108,5006,Lácteos del Sur
+64,2026-08-10,9,36,19889,Lácteos del Sur
+65,2026-08-10,11,54,8752,Panificadora San José
+66,2026-08-10,12,96,5993,Panificadora San José
+67,2026-08-10,17,48,13762,Granja La Esperanza
+68,2026-08-13,3,45,11386,Distribuidora Central
+69,2026-08-13,4,110,9653,Distribuidora Central
+70,2026-08-13,14,88,3928,Bebidas del Paraguay
+71,2026-08-13,15,99,8610,Bebidas del Paraguay
+72,2026-08-13,16,30,7682,Bebidas del Paraguay
+73,2026-08-13,20,44,10466,Limpia Hogar S.A.
+74,2026-08-17,2,72,4350,Distribuidora Central
+75,2026-08-17,3,45,10822,Distribuidora Central
+76,2026-08-17,7,24,14528,Distribuidora Central
+77,2026-08-17,8,144,5060,Lácteos del Sur
+78,2026-08-17,11,60,8705,Panificadora San José
+79,2026-08-17,12,72,6263,Panificadora San José
+80,2026-08-17,13,45,5422,Panificadora San José
+81,2026-08-17,17,66,14306,Granja La Esperanza
+82,2026-08-20,5,84,5879,Distribuidora Central
+83,2026-08-20,6,60,4934,Distribuidora Central
+84,2026-08-20,9,24,19737,Lácteos del Sur
+85,2026-08-20,10,40,8231,Lácteos del Sur
+86,2026-08-20,14,132,4161,Bebidas del Paraguay
+87,2026-08-24,1,99,6549,Distribuidora Central
+88,2026-08-24,4,90,9628,Distribuidora Central
+89,2026-08-24,13,40,5362,Panificadora San José
+90,2026-08-24,15,81,9376,Bebidas del Paraguay
+91,2026-08-24,19,8,16772,Limpia Hogar S.A.
+92,2026-08-27,2,88,4382,Distribuidora Central
+93,2026-08-27,3,60,11423,Distribuidora Central
+94,2026-08-27,7,24,14297,Distribuidora Central
+95,2026-08-27,8,96,4998,Lácteos del Sur
+96,2026-08-27,9,24,18364,Lácteos del Sur
+97,2026-08-27,11,48,9475,Panificadora San José
+98,2026-08-27,12,72,6355,Panificadora San José
+99,2026-08-27,13,45,5245,Panificadora San José
+100,2026-08-27,16,30,7685,Bebidas del Paraguay
+101,2026-08-27,20,48,10076,Limpia Hogar S.A.
+102,2026-08-31,1,108,6590,Distribuidora Central
+103,2026-08-31,5,70,5692,Distribuidora Central
+104,2026-08-31,6,40,4937,Distribuidora Central
+105,2026-08-31,10,40,8113,Lácteos del Sur
+106,2026-08-31,14,132,4111,Bebidas del Paraguay
+107,2026-08-31,17,66,14481,Granja La Esperanza
+108,2026-08-31,18,22,8888,Limpia Hogar S.A.
+109,2026-08-31,19,12,16329,Limpia Hogar S.A.
+110,2026-08-31,20,44,10079,Limpia Hogar S.A.
+111,2026-09-03,4,120,9600,Distribuidora Central
+112,2026-09-03,8,108,5126,Lácteos del Sur
+113,2026-09-03,9,27,19700,Lácteos del Sur
+114,2026-09-03,15,90,9100,Bebidas del Paraguay
+115,2026-09-07,2,96,4099,Distribuidora Central
+116,2026-09-07,3,40,10611,Distribuidora Central
+117,2026-09-07,10,40,8000,Lácteos del Sur
+118,2026-09-07,12,96,6248,Panificadora San José
+119,2026-09-07,13,40,5408,Panificadora San José
+120,2026-09-07,16,24,7753,Bebidas del Paraguay
+121,2026-09-07,18,18,8955,Limpia Hogar S.A.
+122,2026-09-10,1,90,6852,Distribuidora Central
+123,2026-09-10,5,63,5789,Distribuidora Central
+124,2026-09-10,6,50,4768,Distribuidora Central
+125,2026-09-10,8,144,5159,Lácteos del Sur
+126,2026-09-10,9,33,18486,Lácteos del Sur
+127,2026-09-10,11,48,8725,Panificadora San José
+128,2026-09-10,14,88,4036,Bebidas del Paraguay
+129,2026-09-10,20,48,11034,Limpia Hogar S.A.
+130,2026-09-14,3,45,10931,Distribuidora Central
+131,2026-09-14,4,110,9602,Distribuidora Central
+132,2026-09-14,10,32,7767,Lácteos del Sur
+133,2026-09-14,11,54,8749,Panificadora San José
+134,2026-09-14,13,60,5317,Panificadora San José
+135,2026-09-14,15,108,9274,Bebidas del Paraguay
+136,2026-09-14,16,27,7505,Bebidas del Paraguay
+137,2026-09-14,17,48,14114,Granja La Esperanza
+138,2026-09-14,18,16,8455,Limpia Hogar S.A.
+139,2026-09-17,2,88,4047,Distribuidora Central
+140,2026-09-17,5,63,5524,Distribuidora Central
+141,2026-09-17,7,24,15346,Distribuidora Central
+142,2026-09-17,12,88,6254,Panificadora San José
+143,2026-09-17,17,48,13613,Granja La Esperanza
+144,2026-09-21,1,99,6786,Distribuidora Central
+145,2026-09-21,3,50,10633,Distribuidora Central
+146,2026-09-21,8,132,5084,Lácteos del Sur
+147,2026-09-21,9,27,19516,Lácteos del Sur
+148,2026-09-21,11,66,9351,Panificadora San José
+149,2026-09-21,13,40,5571,Panificadora San José
+150,2026-09-21,14,132,4197,Bebidas del Paraguay
+151,2026-09-21,16,27,7348,Bebidas del Paraguay
+152,2026-09-21,18,16,8134,Limpia Hogar S.A.
+153,2026-09-21,19,10,15824,Limpia Hogar S.A.
+154,2026-09-21,20,40,10217,Limpia Hogar S.A.
+155,2026-09-24,6,60,4691,Distribuidora Central
+156,2026-09-24,7,24,14947,Distribuidora Central
+157,2026-09-24,15,108,9009,Bebidas del Paraguay
+158,2026-09-24,17,72,13588,Granja La Esperanza
+159,2026-09-28,1,108,6562,Distribuidora Central
+160,2026-09-28,2,88,4336,Distribuidora Central
+161,2026-09-28,4,80,9394,Distribuidora Central
+162,2026-09-28,5,77,5894,Distribuidora Central
+163,2026-09-28,6,50,4755,Distribuidora Central
+164,2026-09-28,10,44,7748,Lácteos del Sur
+165,2026-09-28,12,72,6034,Panificadora San José
+166,2026-09-28,18,22,8459,Limpia Hogar S.A.
+167,2026-09-28,19,9,16889,Limpia Hogar S.A.

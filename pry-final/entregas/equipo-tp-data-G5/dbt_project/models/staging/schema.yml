@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: stg_productos
+    description: Catálogo de 20 productos con costo y precio de venta.
+    columns:
+      - name: producto_id
+        data_tests: [unique, not_null]
+      - name: nombre
+        data_tests: [not_null]
+      - name: precio_venta
+        data_tests: [not_null]
+
+  - name: stg_vendedores
+    description: Los 5 vendedores y su sucursal.
+    columns:
+      - name: vendedor_id
+        data_tests: [unique, not_null]
+
+  - name: stg_compras
+    description: Compras a proveedores, una fila por compra.
+    columns:
+      - name: compra_id
+        data_tests: [unique, not_null]
+      - name: producto_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id
+
+  - name: stg_ventas
+    description: Ventas, una fila por línea de venta, con importes bruto y neto.
+    columns:
+      - name: venta_id
+        data_tests: [unique, not_null]
+      - name: producto_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id
+      - name: vendedor_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_vendedores')
+                field: vendedor_id
+      - name: descuento
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [0.00, 0.05, 0.10]
+                quote: false
+
+  - name: stg_movimientos_stock
+    description: Entradas, salidas y stock inicial del almacén.
+    columns:
+      - name: movimiento_id
+        data_tests: [unique, not_null]
+      - name: tipo
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [stock_inicial, entrada, salida]
+      - name: producto_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_productos')
+                field: producto_id

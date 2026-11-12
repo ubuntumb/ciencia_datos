@@ -1,0 +1,21 @@
+id,nombre,categoria,costo_unitario,precio_venta,stock_inicial
+1,Arroz 1 kg,Almacén,6500,9000,74
+2,Fideo tallarín 500 g,Almacén,4200,6000,63
+3,Aceite de girasol 900 ml,Almacén,11000,15000,95
+4,Yerba mate 500 g,Almacén,9500,13500,91
+5,Azúcar 1 kg,Almacén,5800,8000,88
+6,Harina de trigo 1 kg,Almacén,4800,6800,77
+7,Café molido 250 g,Almacén,14500,21000,73
+8,Leche entera 1 L,Lácteos,5200,7000,129
+9,Queso Paraguay 500 g,Lácteos,19000,27000,71
+10,Yogur bebible 1 L,Lácteos,8000,11500,135
+11,Pan lactal 500 g,Panadería,9000,13000,114
+12,Chipa 250 g,Panadería,6000,10000,64
+13,Galletitas dulces 300 g,Panadería,5500,8500,63
+14,Agua mineral 2 L,Bebidas,4000,6500,71
+15,Gaseosa cola 2 L,Bebidas,9000,13000,87
+16,Jugo de naranja 1 L,Bebidas,7500,11000,89
+17,Huevos (docena),Frescos,14000,19000,124
+18,Detergente 750 ml,Limpieza,8500,12500,137
+19,Jabón en polvo 800 g,Limpieza,16000,23000,63
+20,Papel higiénico x4,Limpieza,10500,15000,131

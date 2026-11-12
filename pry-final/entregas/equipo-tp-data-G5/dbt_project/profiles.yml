@@ -1,0 +1,8 @@
+minimercado:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      # Por defecto, la base que genera pipeline.py en la carpeta del equipo.
+      path: "{{ env_var('DUCKDB_PATH', '../data.duckdb') }}"
+      threads: 4

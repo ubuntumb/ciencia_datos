@@ -1,0 +1,25 @@
+name: minimercado
+version: "1.0.0"
+profile: minimercado
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+clean-targets: ["target", "dbt_packages"]
+
+vars:
+  # Días de venta que debe cubrir el stock: 4 días entre pedidos + 3 de seguridad.
+  dias_cobertura: 7
+
+models:
+  minimercado:
+    staging:
+      +materialized: view
+      +schema: staging
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts
